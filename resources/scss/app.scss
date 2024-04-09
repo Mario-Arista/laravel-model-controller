@@ -1,2 +1,45 @@
+@use './partials/variables.scss' as *;
+
 /*resources/scss/app.scss*/
 @import "~bootstrap/scss/bootstrap";
+
+// Import partziali CSS
+@import './partials/header';
+
+
+
+.container {
+
+    h2 {
+        color: $primary;
+        margin-bottom: 20px;
+    }
+
+    #movies {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 50px 10px;
+
+        .single-movie {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+
+            width: calc(100% / 5 - 10px / 5 * 4);
+
+            color: white;
+            background: linear-gradient(black, $primary);
+
+            img {
+                width: 90%;
+            }
+        }
+    }
+    
+
+}
+
+
+

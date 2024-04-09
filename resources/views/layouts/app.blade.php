@@ -3,28 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>@yield('title')</title>
 
     <!-- Includiamo gli assets con la direttiva vite -->
     @vite('resources/js/app.js')
 
 </head>
 
-<body>
-    <div class="container">
-        <h1>cioa a tutti!</h1>
-        <h2>tutti i film del nostro database:</h2>
-    </div>
+<body class="bg-dark">
 
-    <div class="container">
-        
-        <ul>
-            @foreach ($movies as $movie)
-            <li>{{$movie->title}}</li>
-            @endforeach
+    @include('partials/header')
 
-        </ul>
-        
-    </div>
+    @yield('content')
+
 </body>
 </html>
